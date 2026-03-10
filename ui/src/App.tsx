@@ -1,35 +1,17 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { RouterProvider } from 'react-router-dom';
+import { getRouter } from '@/app/router'; //router 폴더의 index를 가져옴
+import { useAuthStore } from '@/features/auth/model/use-auth-store';
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+  //1. Zustand를 이용해 로그인 상태 실시간 확인
+  const { isLoggedIn } = useAuthStore();
+
+  //2. 로그인 상태를 넣어 필요한 주소 가져옴
+  const router = getRouter(isLoggedIn);
+
+  //3. RouterProvider에서 만든 주소를 넣어 앱을 실행
+  return <RouterProvider router={router} />;
 }
 
 export default App
