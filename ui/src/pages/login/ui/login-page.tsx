@@ -12,7 +12,6 @@ const LoginForm = ({ onFinish }: { onFinish: (values: LoginValues) => void}) => 
             <Input placeholder="아이디 입력" size="large" />
         </Form.Item>
 
-
         <Form.Item name="password" rules={[{ required:true, message: '비밀번호를 입력하세요'}]}>
             <Input.Password placeholder="비밀번호" size="large" />
         </Form.Item>
