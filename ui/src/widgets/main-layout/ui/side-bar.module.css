@@ -1,0 +1,62 @@
+
+.sider {
+  background: #f6f9fc !important;
+}
+
+/* Sider 내부 전체 영역 */
+.sider :global(.ant-layout-sider-children) {
+  background: #f6f9fc !important;
+}
+
+/* Sider 글자있는 메뉴 영역 */
+.sider :global(.ant-menu) {
+  background: #f6f9fc !important;
+}
+
+.sideWrap {
+  width: 220px;
+  background: #f6f9fc;
+  border-right: 1px solid #e6e9ee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.2s ease;
+}
+
+.title {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.toggleBtn {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.menu {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.menuItem {
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #1a1f36;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.menuItem:hover {
+  background: #f6f9fc;
+}
+
+.menuItemActive {
+  background: #e8fcf0;
+  color: #0ab96d;
+  font-weight: 700;
+}

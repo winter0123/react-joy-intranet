@@ -1,13 +1,11 @@
-:root {
-  width: 100%;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  text-align: left; 
-}
-
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+/* display: flex 전체 레이아웃이 콘텐츠 크기에 맞춰져서 헤더가 사이드바 폭으로만 보이게됨 */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
 }
