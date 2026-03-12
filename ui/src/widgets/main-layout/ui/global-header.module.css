@@ -1,0 +1,25 @@
+.headerWrap {
+  height: 56px;
+  background: #f6f9fc;
+  border-bottom: 1px solid #e6e9ee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.title {
+  font-weight: 700;
+  color: #1a1f36;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.search {
+  width: 220px;
+  border-radius: 10px;
+}

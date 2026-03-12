@@ -1,5 +1,6 @@
 import { App, ConfigProvider } from 'antd';
 import { AppRouter } from './router/app-router';
+import './i18n';
 
 export const AppProviders = () => {
     return (
